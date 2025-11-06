@@ -84,9 +84,16 @@ return [
         ],
 
         'mongodb' => [
-            'driver' => 'mongodb',
-            'dsn' => env('DB_URI'),
+            'driver'   => 'mongodb',
+            'dsn'      => env('DB_URI'),
+            'host'     => env('DB_HOST'),
+            'port'     => env('DB_PORT', 27017),
             'database' => env('DB_DATABASE'),
+            'username' => env('DB_USERNAME'),
+            'password' => env('DB_PASSWORD'),
+            'options'  => [
+                'appname' => 'SmartLifestyleCluster',
+            ],
         ],
 
         'pgsql' => [
